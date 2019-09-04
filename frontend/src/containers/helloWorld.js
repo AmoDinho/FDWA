@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Query } from "react-apollo";
 import { Grid, Col, Row } from "react-bootstrap";
 import HelloWorld from "../components/HelloWorld";
 import "../styles/styles.css";
