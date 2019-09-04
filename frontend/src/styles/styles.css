@@ -1,5 +1,5 @@
 .App {
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .App .navbar-brand {
@@ -7,7 +7,7 @@
 }
 
 .Home .landingPage {
-  padding: 5px 0;
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -20,27 +20,22 @@
   color: #999;
 }
 
-.Home .homeCols {
-  justify-content: center;
-  align-items: center;
-}
-
-.homeButtonToolbar {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  padding-top: 5%;
-}
-
-.container-fluid {
-  display: flex !important;
-  justify-content: center !important;
-}
-
 .NotFound {
   padding-top: 100px;
   text-align: center;
 }
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 420px;
+  }
+}
+
 
 body {
   margin: 0;
