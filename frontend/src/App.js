@@ -22,24 +22,40 @@ class App extends Component {
   handleLogout = async event => {
     await Auth.signOut();
     this.userHasAuthenticated(false);
-    this.props.history.push("/login");
+    this.props.history.push("/Login");
   }
+
   render() {
     const childProps = {
-			isAuthenticated: this.state.isAuthenticated,
-			userHasAuthenticated: this.userHasAuthenticated,
-		};
+      isAuthenticated: this.state.isAuthenticated,
+      userHasAuthenticated: this.userHasAuthenticated,
+    };
     return(
-      <div className="appContainer">
+      <div className="App container">
         <Navbar fluid collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/"><span role="img" aria-label="Pizza">🍕</span></Link>
+              <Link to="/">FDWA</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav pullRight>
+              {this.state.isAuthenticated
+                ? <NavItem onClick={this.handleLogout}>Logout</NavItem>
+                : <Fragment>
+                    <LinkContainer to="#">
+                      <NavItem>Signup</NavItem>
+                    </LinkContainer>
+                    <LinkContainer to="/Login">
+                      <NavItem>Login</NavItem>
+                    </LinkContainer>
+                  </Fragment>
+              }
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
-        <Routes />
+        <Routes childProps={childProps} />
       </div>
     );
   }
