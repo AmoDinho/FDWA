@@ -1,1 +1,8 @@
-{}
+{
+	"auth": {
+		"fdwafrontende1b02e08": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

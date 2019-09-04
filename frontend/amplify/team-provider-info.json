@@ -9,6 +9,13 @@
             "UnauthRoleName": "fdwa-frontend-dev-20190904061531-unauthRole",
             "StackName": "fdwa-frontend-dev-20190904061531",
             "StackId": "arn:aws:cloudformation:us-east-1:117896785491:stack/fdwa-frontend-dev-20190904061531/a3146810-ceca-11e9-9206-0a79b0f3a14a"
+        },
+        "categories": {
+            "auth": {
+                "fdwafrontende1b02e08": {
+                    "hostedUIProviderCreds": "[]"
+                }
+            }
         }
     }
 }
