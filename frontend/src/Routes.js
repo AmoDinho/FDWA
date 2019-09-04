@@ -6,10 +6,11 @@ import helloWorld from "./containers/helloWorld";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
 
-export default () =>
+export default ({ childProps }) =>
   <Switch>
-    <Route exact path="/" component={ Home } />
-    <Route exact path="/queries/helloWorld" component={ helloWorld } />
+    <AppliedRoute path="/" exact component={ Home } props={ childProps } />
+    <AppliedRoute path="/Login" exact component={ Login } props={ childProps } />
+    <AppliedRoute path="/queries/helloWorld" exact component={ helloWorld } props={ childProps } />
     { /* Error 404 */ }
-    <Route component={NotFound} />
+    <Route component={ NotFound } />
   </Switch>;
